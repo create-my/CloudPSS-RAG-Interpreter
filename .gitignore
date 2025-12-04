@@ -42,7 +42,7 @@ failure-reason-predictor/
 docs/
 
 # 数据文件
-data/*.csv
+#data/*.csv
 
 # Docker
 volumes/

@@ -1,0 +1,29 @@
+获取指定key的元件,使用getComponentByKey(componentKey)获取指定key=component_new_bus_3_p_4的元件
+获取指定 rid 的所有元件,使用getComponentsByRid(rid)获取模型中获取rid =model/CloudPSS/_newBreaker_3p的所有元件
+获取指定名称的计算方案,使用getModelJob(name)获取模型中name='电磁暂态仿真方案 1'的计算方案
+查看计算方案参数,使用getModelJob(name)获取模型中name='电磁暂态仿真方案 1'的计算方案，判断job数据类型，查看job参数
+查看模型的属性和方法,查看模型的属性和方法
+查看模型rid,查看模型的rid，你可以先看看模型的属性
+查看模型的name,查看模型的name名称，你可以先看看模型的属性
+查看模型的描述,查看模型的描述，你可以先看看模型的属性
+当前项目的所有参数方案,查看当前项目模型的参数方案configs
+查看当前项目的所有计算方案,获取当前项目的所有计算方案model.jobs
+查看当前模型指定名称的计算方案,获取指定名称的计算方案getModelJob(name)，name = ‘电磁暂态仿真方案 1’
+查看当前模型第一个的计算方案,查看当前模型第一个的计算方案
+当前项目的版本信息,查看当前项目模型的版本内容revision，查看某个元件属性
+查看当前模型的上下文相关信息,查看当前模型的上下文相关信息model.context，'counter'包含了模型元件统计信息
+获取指定 rid 的项目,获取指定 rid 的项目，rid = 'model/yuanxuefeng/SZ-station'
+获取所有元件,获取所有元件，model.getAllComponents()，查看某个元件属性
+获取当前拓扑实例图纸及元件,获取当前模型拓扑实例图纸及元件，先获取revision，再revision.getImplements()
+查看某元件对象的所有参数,查看某元件对象的所有参数：使用component.__dict__查看元件key='component_new_bus_3_p_4'的所有参数
+添加元件,"创建一个新的常数元件并添加到拓扑中，常数元件的rid是model/CloudPSS/_newConstant。你可以使用addComponent方法。设置该函数的输入definition就是rid, label为‘test’, args需要查看该模型中同类的元件作为参考, pins为默认, canvas='canvas_0', position=None, size=None"
+添加一个电磁暂态仿真计算方案,"创建一个电磁暂态仿真方案addJob(job),job=emtp
+emtp：电磁暂态仿真方案
+；完成添加后，查看该计算方案。"
+添加一个参数方案,"添加一个参数方案，修改endtime=0.8,你需要先查看当前模型项目的参数方案作为参考。添加完成后，查看该参数方案。"
+修改某个元件参数,更新元件参数，更新元件component_new_fault_resistor_3_p_2的label为‘三相故障元件’，使用model.updateComponent，并检查是否修改成功
+删除元件,"删除元件component_new_constant_1，可以使用model.removeComponent(key),然后getAllComponents取key取所有元件,检查元件是否在元件表中，没有则已经删除"
+更新元件参数,"查看模型中label=三相故障元件,查看该元件的参数args,将故障开始时刻fs修改为0.2s，使用model.save保存模型"
+根据label查看元件的属性,查看所有元件的属性，筛选label='三相故障元件'的元件，查看该元件的参数args
+执行仿真,执行仿真，选择第一个参数方案和第一个计算方案；完成仿真后，查看plots曲线有多少个
+检查同类型所有元件label是否重复,查看模型中的所有元件中，同类元件中label相同的元件。请忽略key以edge开头的连接线元件。

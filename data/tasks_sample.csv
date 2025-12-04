@@ -1,0 +1,4 @@
+name,task
+获取所有元件,获取模型中的所有元件并打印
+获取指定元件,使用getComponentByKey获取key为component_1的元件
+更新元件标签,更新元件component_1的label为新标签

@@ -1,0 +1,8 @@
+state,skill
+获取模型中的所有元件,"使用 model.getAllComponents() 获取模型中所有元件的列表"
+获取指定key的元件,"使用 model.getComponentByKey(componentKey) 获取指定key的元件对象"
+更新元件参数,"使用 model.updateComponent(cid, parameters) 更新指定元件的参数"
+删除元件,"使用 model.removeComponent(key) 删除指定key的元件"
+创建仿真任务,"使用 model.createJob(jobType, name) 创建新的仿真任务"
+运行仿真,"使用 job.run() 执行仿真任务并等待结果"
+获取仿真结果,"使用 job.getResult() 获取仿真任务的执行结果"
