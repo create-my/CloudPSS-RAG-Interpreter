@@ -1,0 +1,47 @@
+version: '3.5'
+
+services:
+  # Milvus向量数据库
+  milvus-standalone:
+    container_name: milvus-standalone
+    image: milvusdb/milvus:v2.3.3
+    command: ["milvus", "run", "standalone"]
+    environment:
+      ETCD_USE_EMBED: "true"
+      ETCD_DATA_DIR: "/var/lib/milvus/etcd"
+      COMMON_STORAGETYPE: "local"
+    volumes:
+      - ./volumes/milvus:/var/lib/milvus
+    ports:
+      - "19530:19530"
+      - "9091:9091"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9091/healthz"]
+      interval: 30s
+      start_period: 90s
+      timeout: 20s
+      retries: 3
+
+  # CloudPSS RAG服务器
+  cloudpss-rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloudpss-rag-server
+    environment:
+      - MILVUS_HOST=milvus-standalone
+      - MILVUS_PORT=19530
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    depends_on:
+      milvus-standalone:
+        condition: service_healthy
+
+networks:
+  default:
+    name: cloudpss-rag-network

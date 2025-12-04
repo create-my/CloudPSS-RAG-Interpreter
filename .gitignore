@@ -1,0 +1,66 @@
+# 环境文件
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# 模型文件（需要单独下载）
+models/*.pth
+models/all-MiniLM-L6-v2/
+failure-reason-predictor/
+docs/
+
+# 数据文件
+data/*.csv
+
+# Docker
+volumes/
+
+# 日志
+*.log
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# 测试
+.pytest_cache/
+.coverage
+htmlcov/

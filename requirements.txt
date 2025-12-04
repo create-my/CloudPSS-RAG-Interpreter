@@ -1,0 +1,29 @@
+# CloudPSS RAG Interpreter Dependencies
+
+# Web框架
+fastapi>=0.100.0
+uvicorn>=0.22.0
+requests>=2.31.0
+
+# 向量数据库
+pymilvus>=2.3.0
+
+# 机器学习
+torch>=2.0.0
+sentence-transformers>=2.2.0
+numpy<2.0
+
+# Open Interpreter
+open-interpreter>=0.3.0
+
+# CloudPSS SDK
+cloudpss>=0.1.0
+
+# 工具库
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+
+# 可选：用于开发
+# pytest>=7.0.0
+# black>=23.0.0
+# flake8>=6.0.0
