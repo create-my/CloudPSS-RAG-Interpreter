@@ -201,10 +201,8 @@ python milvus_init.py --csv your_skills.csv
 
 ## 注意事项
 
-- 首次运行需要先初始化Milvus数据库（已完成）
+- 首次运行需要先初始化Milvus数据库
 - 服务器启动后会自动加载技能预测模型
-- 如果看到编码警告或FutureWarning，可以忽略
-- 发布前请删除 `.env` 文件
 
 ## 常见问题
 
